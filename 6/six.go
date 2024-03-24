@@ -44,6 +44,7 @@ func main() {
 	cancel()
 	wg.Wait()
 
+	// Выход по таймауту
 	timeout := time.Duration(3) * time.Second
 	wg.Add(1)
 	go func(timeout time.Duration) {
